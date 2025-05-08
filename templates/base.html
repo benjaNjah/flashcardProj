@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HSC Flashcards</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+    <a href="/" {% if active_page == 'home' %}class="current"{% endif %}>Home</a>
+    <a href="/add_card" {% if active_page == 'add_card' %}class="current"{% endif %}>Add Card</a>
+    <a href="/maintain" {% if active_page == 'maintain' %}class="current"{% endif %}>Maintain Cards</a>
+    </nav>
+    
+    {% block content %}{% endblock %}
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.flashcard');
+            cards.forEach(card => {
+                card.addEventListener('click', () => card.classList.toggle('active'));
+            });
+        });
+    </script>
+</body>
+</html>

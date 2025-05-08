@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Select a Topic</h1>
+<div class="topic-list">
+    {% for topic in topics %}
+    <a href="{{ url_for('cards', topic=topic['topic']) }}" class="topic-button">
+        {{ topic['topic'] }}
+    </a>
+    {% endfor %}
+</div>
+<h1>Select a Difficulty</h1>
+
+<div class="difficulty-list">
+    {% for difficulty in diff_levels %}
+    <a href="{{ url_for('cards_diff', difficulty=difficulty['difficulty']) }}" class="difficulty-button">
+        {{ difficulty['difficulty'] }}
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

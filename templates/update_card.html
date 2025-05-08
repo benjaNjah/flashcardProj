@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Update Card</h1>
+
+<form method="POST">
+<table>
+      <tr>
+        <td><label for="topic">Topic:</label></td>
+        <td><input type="text" id="topic" name="topic" value="{{ card['topic'] }}" required></td>
+        </tr>
+       <tr>
+        <td> <label for="question">Question:</label></td>
+        <td><textarea id="question" name="question" required>{{ card['question'] }}</textarea></td>
+        </tr>
+   
+        <tr>
+        <td><label for="answer">Answer:</label></td>
+        <td><textarea id="answer" name="answer" required>{{ card['answer'] }}</textarea></td>
+        </tr>
+    
+        <tr>
+        <td><label for='difficulty'>Difficulty:</label></td>
+        <td><select id="difficulty" name="difficulty" required>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+
+        </select>
+        </td>
+        </tr>
+    <tr><td><button type="submit">Update Card</button></td><td></td>
+</table>    
+</form>
+
+{% endblock %}

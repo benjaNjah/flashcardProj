@@ -1,0 +1,124 @@
+/* Body styles - main content container */
+body { 
+   font-family: Arial;           /* Default font for all text */
+   max-width: 800px;            /* Maximum page width */ 
+   margin: 0 auto;              /* Center content horizontally */
+   padding: 20px;               /* Space around content */
+}
+
+/* Topic grid layout */
+.topic-list { 
+   display: grid;               /* Grid layout for topics */
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Responsive columns */
+   gap: 20px;                  /* Space between grid items */
+}
+
+/* Individual topic button styling */
+.topic-button { 
+   padding: 20px;              /* Space inside buttons */
+   background-color: #bdf3b0;  /* Light green background */
+   border-radius: 5px;         /* Rounded corners */
+   text-decoration: none;      /* Remove link underline */
+   color: black;               /* Black text */
+}
+
+/* diff grid layout */
+.difficulty-list { 
+   display: grid;               /* Grid layout for topics */
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Responsive columns */
+   gap: 20px;                  /* Space between grid items */
+}
+
+/* Individual topic button styling */
+.difficulty-button { 
+   padding: 20px;              /* Space inside buttons */
+   background-color: #e3b0f3;  /* Light green background */
+   border-radius: 5px;         /* Rounded corners */
+   text-decoration: none;      /* Remove link underline */
+   color: black;               /* Black text */
+}
+/* Flashcard container styling */
+.flashcard { 
+   border: 1px solid #ccc;     /* Light gray border */
+   padding: 20px;              /* Space inside cards */
+   margin: 20px 0;             /* Space between cards */
+   cursor: pointer;            /* Hand cursor on hover */
+}
+
+/* Answer section styling (hidden by default) */
+.answer { 
+   display: none;              /* Hide answers initially */
+   margin-top: 20px;          /* Space above answer when shown */
+   border-top: 1px solid #eee; /* Light separator line */
+}
+
+/* Show answer when flashcard is active */
+.flashcard.active .answer { 
+   display: block;             /* Show answer when card clicked */
+}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f0f0f0;
+    }
+
+    .update-btn, .delete-btn {
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 3px;
+        color: white;
+        display: inline-block;
+    }
+
+    .update-btn {
+        background-color: #4CAF50;
+    }
+
+    .delete-btn {
+        background-color: #f44336;
+    }
+
+    .update-btn:hover {
+        background-color: #45a049;
+    }
+
+    .delete-btn:hover {
+        background-color: #da190b;
+    }
+
+nav {
+    background-color: #7f8991;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+

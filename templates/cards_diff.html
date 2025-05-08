@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ difficulty }} Flashcards</h1>
+<p>Click on a card to reveal the answer</p>
+
+{% for card in cards %}
+<div class="flashcard">
+    <div class="question">
+        <strong>Topic:</strong> {{ card['topic'] }}
+    </div>
+    <div class="question">
+        <strong>Question:</strong> {{ card['question'] }}
+    </div>
+    <div class="answer">
+        <strong>Answer:</strong> {{ card['answer'] }}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

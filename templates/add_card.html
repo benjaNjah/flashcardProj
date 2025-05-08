@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add card</h1>
+<p>Add a flashcard to the pack</p>
+
+<form action='/add_card' method='POST'>
+<table>
+
+<tr>
+            <td><label for='topic'>Topic:</label></td>
+            <td><input type='text' id='topic' name='topic'><br><br></td>
+</tr>
+<tr>        <td>   <label for='question'>Question:</label></td>
+            <td><textarea cols="40" rows="5" id='question' name='question'></textarea><br><br></td>
+</tr>
+<tr>
+           <td> <label for='answer'>Answer:</label></td>
+            <td><textarea cols="40" rows="5" id='answer' name='answer'></textarea><br><br></td>
+</tr>
+<tr>
+           <td> <label for='difficulty'>Difficulty:</label></td>
+            <td><select id="difficulty" name="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+
+                </select>
+            <br><br>
+            </td>
+</tr>
+
+<tr>
+            <td><input type='submit' value='Submit Card'></td>
+</tr>        
+
+</table>
+</form>
+
+
+{% endblock %}
